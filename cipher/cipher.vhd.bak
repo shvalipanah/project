@@ -1,0 +1,73 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_signed.all; 
+
+ENTITY cipher IS
+PORT(
+nrst : IN std_logic;
+clk : IN std_logic;
+start : IN std_logic;
+pt : IN std_logic_vector(15 DOWNTO 0);
+ct : OUT std_logic_vector(15 DOWNTO 0);
+ready : OUT std_logic
+);
+END cipher;
+
+ARCHITECTURE myCipher of cipher is
+  COMPONENT adder IS
+Port (
+ce : in STD_LOGIC;
+a : in STD_LOGIC_VECTOR (15 downto 0);
+b : in STD_LOGIC_VECTOR (15 downto 0);
+cin : in STD_LOGIC;
+sum : out STD_LOGIC_VECTOR (15 downto 0);
+cout : out STD_LOGIC);
+end COMPONENT;
+ signal temp :STD_LOGIC_VECTOR (15 downto 0);
+  type state_type is (idle, running);
+  signal state: state_type :=idle;
+  SIGNAL k, b: std_logic_vector(15 DOWNTO 0);
+  signal senable :std_logic :='0' ;
+  signal s : std_logic_vector(15 downto 0);
+  signal co : std_logic;
+  
+begin
+  k <= X"F0F0";
+  b <= X"0001";
+  add :  adder port map (senable,temp,b,'0',s,co);
+    process(clk,nrst,start,temp)
+      variable count : Integer := 0;
+      begin
+        senable <= k(count);
+        
+        if (not nrst = '1')then
+          count := 0;
+          temp <=X"0000";
+          ct   <=X"0000";
+          ready <='1';
+          state <= idle;
+          --input<=0 cant
+        elsif (clk'event and clk = '1' )then
+          if (state = running )then
+            if (k(count)='1')then
+              temp <= s;
+            elsif(k(count) = '0')then
+              temp <= '0' & temp(15 DOWNTO 1);
+            end if;
+            count := count+1;
+            ct <= temp;
+            if (count = 16)then
+              count :=0;
+              state <= idle;
+              ready <= '1';
+            end if ;
+          end if;
+          
+        elsif (start'event and start ='1')then 
+          state <= running;
+          ready <= '0'; 
+          temp <=pt;
+        end if;    
+      end process;
+end myCipher;
+

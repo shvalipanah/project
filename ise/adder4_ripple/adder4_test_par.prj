@@ -1,0 +1,2 @@
+vhdl work "netgen/par/ripple_adder4_timesim.vhd"
+vhdl work "adder4_test.vhd"

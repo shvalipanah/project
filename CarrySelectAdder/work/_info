@@ -1,0 +1,241 @@
+m255
+K3
+13
+cModel Technology
+Z0 dA:\Carry Select Adder
+Eadder
+Z1 w1478978359
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dA:\Carry Select Adder
+Z7 8A:/Carry Select Adder/fullAdder.vhd
+Z8 FA:/Carry Select Adder/fullAdder.vhd
+l0
+L33
+VaiOd:n[j[]W?Cl[i8d^Ck2
+Z9 OL;C;10.1c;51
+32
+Z10 !s108 1479203355.653000
+Z11 !s90 -reportprogress|300|-work|work|A:/Carry Select Adder/fullAdder.vhd|
+Z12 !s107 A:/Carry Select Adder/fullAdder.vhd|
+Z13 o-work work
+Z14 tExplicit 1
+!s100 gGUi5R;k6z3ZEgMaCi=D=3
+!i10b 1
+Amyadder
+R2
+R3
+R4
+R5
+Z15 DEx4 work 5 adder 0 22 aiOd:n[j[]W?Cl[i8d^Ck2
+32
+l45
+L43
+V;^gdf?l1P`4EMb5Gcb3Ek2
+R9
+R10
+R11
+R12
+R13
+R14
+!s100 8b6n7Q:JP<je:_@[WS:Yl2
+!i10b 1
+Ecsa
+Z16 w1479036553
+R2
+R3
+R4
+R5
+R6
+Z17 8A:/Carry Select Adder/ADDER.vhd
+Z18 FA:/Carry Select Adder/ADDER.vhd
+l0
+L5
+Vmn6D=gQjc1ON]6RCHJLY12
+R9
+32
+Z19 !s108 1479203355.323000
+Z20 !s90 -reportprogress|300|-work|work|A:/Carry Select Adder/ADDER.vhd|
+Z21 !s107 A:/Carry Select Adder/ADDER.vhd|
+R13
+R14
+!s100 E9RL2z>iScicOeAbIbi4W2
+!i10b 1
+Amycsa
+Z22 DEx4 work 3 mux 0 22 Udc97GZbjgh?NG`1f2:Hj2
+Z23 DEx4 work 9 fouradder 0 22 dg7<jVKW?D7?0N@>R69XX1
+R2
+R3
+R4
+R5
+DEx4 work 3 csa 0 22 mn6D=gQjc1ON]6RCHJLY12
+32
+l15
+L12
+VK4EDX1UJ[;:WN;0;RgZK71
+R9
+R19
+R20
+R21
+R13
+R14
+!s100 ;8_a>D:^0oihH[ZMFBdhI0
+!i10b 1
+Efour_adder
+Z24 w1479036210
+R2
+R3
+R4
+R5
+R6
+Z25 8A:/Carry Select Adder/4-bit-adder.vhd
+Z26 FA:/Carry Select Adder/4-bit-adder.vhd
+l0
+L5
+VWF9AHJlfZOW]WzaLgMMcm1
+R9
+32
+Z27 !s108 1479036236.802000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/Carry Select Adder/4-bit-adder.vhd|
+Z29 !s107 A:/Carry Select Adder/4-bit-adder.vhd|
+Z30 o-work work -2002 -explicit
+R14
+!s100 Sm6iNFz74[W3Ka6oaHLHC3
+!i10b 1
+Amyfbadder
+DEx4 work 5 adder 0 22 Ji21mJHAh_OEodkE41Bb>2
+R2
+R3
+R4
+R5
+DEx4 work 10 four_adder 0 22 WF9AHJlfZOW]WzaLgMMcm1
+l15
+L13
+V01<lkcQNUZYMMDCZ10MEI0
+R9
+32
+R27
+R28
+R29
+R30
+R14
+!s100 iVzQa1lEk:;io@CRIhXS]2
+!i10b 1
+Efouradder
+Z31 w1479036313
+R2
+R3
+R4
+R5
+R6
+R25
+R26
+l0
+L5
+Vdg7<jVKW?D7?0N@>R69XX1
+R9
+32
+Z32 !s108 1479203354.986000
+Z33 !s90 -reportprogress|300|-work|work|A:/Carry Select Adder/4-bit-adder.vhd|
+R29
+R13
+R14
+!s100 j09ff?0OgAN5BKSCNIM9n0
+!i10b 1
+Amyfbadder
+R15
+R2
+R3
+R4
+R5
+R23
+32
+l15
+L13
+Va>[?hoKUQ2laCCDDR;O750
+R9
+R32
+R33
+R29
+R13
+R14
+!s100 ZPL?G_?ZJeD9clUc0J^300
+!i10b 1
+Emux
+Z34 w1479036503
+R2
+R3
+R4
+R5
+R6
+Z35 8A:/Carry Select Adder/multiplexer.vhd
+Z36 FA:/Carry Select Adder/multiplexer.vhd
+l0
+L5
+VUdc97GZbjgh?NG`1f2:Hj2
+R9
+32
+Z37 !s108 1479203355.943000
+Z38 !s90 -reportprogress|300|-work|work|A:/Carry Select Adder/multiplexer.vhd|
+Z39 !s107 A:/Carry Select Adder/multiplexer.vhd|
+R13
+R14
+!s100 7j9>j0<d8I<8^HAB=EOUS1
+!i10b 1
+Amymux
+R2
+R3
+R4
+R5
+R22
+32
+l14
+L12
+VB8>dajP67NkOhQA9=IOEV0
+R9
+R37
+R38
+R39
+R13
+R14
+!s100 _X[gXN>3Q:z9`>>W:@4SD0
+!i10b 1
+Etestbench
+Z40 w1479036628
+Z41 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+R6
+Z42 8A:/Carry Select Adder/tb.vhd
+Z43 FA:/Carry Select Adder/tb.vhd
+l0
+L8
+VncQ@QQX>zif<YUZa3:alQ1
+R9
+32
+Z44 !s108 1479203356.228000
+Z45 !s90 -reportprogress|300|-work|work|A:/Carry Select Adder/tb.vhd|
+Z46 !s107 A:/Carry Select Adder/tb.vhd|
+R13
+R14
+!s100 5;hQ`T0dX9b[62H7dZibj1
+!i10b 1
+Atb
+R41
+R4
+R5
+DEx4 work 9 testbench 0 22 ncQ@QQX>zif<YUZa3:alQ1
+32
+l25
+L11
+VfJ8UJL2iGGbXIk:iXMOSd3
+R9
+R44
+R45
+R46
+R13
+R14
+!s100 aNHLTg:eMcBC70okKdU^Q3
+!i10b 1

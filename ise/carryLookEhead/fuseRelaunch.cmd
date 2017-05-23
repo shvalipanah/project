@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "A:/ise/carryLookEhead/adder4_test_isim_par.exe" -prj "A:/ise/carryLookEhead/adder4_test_par.prj" "work.adder4_test" 

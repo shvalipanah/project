@@ -1,0 +1,193 @@
+m255
+K3
+13
+cModel Technology
+dA:\projects
+Eadder
+Z0 w1477300550
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dA:\alu
+Z6 8A:/alu/Adder.vhd
+Z7 FA:/alu/Adder.vhd
+l0
+L33
+V^WYRDdXdhT9mm3OKShDfK3
+Z8 OL;C;10.1c;51
+32
+Z9 !s108 1478556221.504000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/alu/Adder.vhd|
+Z11 !s107 A:/alu/Adder.vhd|
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+!s100 PVg0:o0H=@@MRk2cM_L<30
+!i10b 1
+Amyadder
+R1
+R2
+R3
+R4
+Z14 DEx4 work 5 adder 0 22 ^WYRDdXdhT9mm3OKShDfK3
+32
+l47
+L44
+VQh`UW:=ZW^LaX3:z4Y]I_2
+R8
+R9
+R10
+R11
+R12
+R13
+!s100 UBm:oAYn7D:eGSCC8HW4z2
+!i10b 1
+Ealuoperation
+Z15 w1478555905
+R1
+R2
+R3
+R4
+R5
+Z16 8A:/alu/ALU.vhd
+Z17 FA:/alu/ALU.vhd
+l0
+L34
+V_MRMai`AOiOCMP9z6SfIN3
+R8
+32
+Z18 !s108 1478556221.806000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/alu/ALU.vhd|
+Z20 !s107 A:/alu/ALU.vhd|
+R12
+R13
+!s100 ?g=Ydzf3l^;CdNUOk=6>?3
+!i10b 1
+Aalu
+R14
+Z21 DEx4 work 5 dff32 0 22 i?ODNfE_1KZdBWGJXfNYX2
+Z22 DEx4 work 3 dff 0 22 Ofe@N4ZK[?RO^2gG5>gh:1
+R1
+R2
+R3
+R4
+DEx4 work 12 aluoperation 0 22 _MRMai`AOiOCMP9z6SfIN3
+32
+l50
+L45
+VGXF8]jVhFK?I8mz9PA[kW1
+R8
+R18
+R19
+R20
+R12
+R13
+!s100 L?RY[Bk>J9ILYLU0jA_PO1
+!i10b 1
+Edff
+Z23 w1477300574
+R3
+R4
+R5
+Z24 8A:/alu/dff.vhd
+Z25 FA:/alu/dff.vhd
+l0
+L32
+VOfe@N4ZK[?RO^2gG5>gh:1
+R8
+32
+Z26 !s108 1478556222.141000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/alu/dff.vhd|
+Z28 !s107 A:/alu/dff.vhd|
+R12
+R13
+!s100 NkgKHk;o:gK]Qn>;R8e]U3
+!i10b 1
+Adf
+R3
+R4
+R22
+32
+l41
+L39
+VJE7mfKe]z;QNbHRllG<i23
+R8
+R26
+R27
+R28
+R12
+R13
+!s100 ^H9:8HE4D4DR<S0fn8@e71
+!i10b 1
+Edff32
+Z29 w1477300586
+R3
+R4
+R5
+Z30 8A:/alu/dff32.vhd
+Z31 FA:/alu/dff32.vhd
+l0
+L32
+Vi?ODNfE_1KZdBWGJXfNYX2
+R8
+32
+Z32 !s108 1478556222.463000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/alu/dff32.vhd|
+Z34 !s107 A:/alu/dff32.vhd|
+R12
+R13
+!s100 @@Zjg9^62QVScQAKXAbd>1
+!i10b 1
+Adf32
+R3
+R4
+R21
+32
+l41
+L39
+VIdb8]jVlgndUFn=WBG0]T0
+R8
+R32
+R33
+R34
+R12
+R13
+!s100 C07^[B`7j1eJDH?2VYQgJ2
+!i10b 1
+Etestbench
+Z35 w1477301153
+Z36 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R3
+R4
+R5
+Z37 8A:/alu/tb.vhd
+Z38 FA:/alu/tb.vhd
+l0
+L7
+VbH[nOO[iW?4LIRgQF;S8N2
+R8
+32
+Z39 !s108 1478556222.793000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|A:/alu/tb.vhd|
+Z41 !s107 A:/alu/tb.vhd|
+R12
+R13
+!s100 :PgYGLIb51E^PC50jf0SP1
+!i10b 1
+Abehavior
+R36
+R3
+R4
+DEx4 work 9 testbench 0 22 bH[nOO[iW?4LIRgQF;S8N2
+32
+l30
+L10
+VP5NNA[N5>oL>307gI963[1
+R8
+R39
+R40
+R41
+R12
+R13
+!s100 K=R[5f=U^1C?;TldRD`Yn1
+!i10b 1

@@ -1,0 +1,30 @@
+Command line:
+   adder4_test_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/carry_lookahead_adder_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  58455
+
+Thu Dec 15 23:46:18 2016
+
+
+ Elaboration Time: 2.51563 sec
+
+ Current Memory Usage: 796.172 Meg
+
+ Total Signals          : 249
+ Total Nets             : 150
+ Total Signal Drivers   : 121
+ Total Blocks           : 89
+ Total Primitive Blocks : 48
+ Total Processes        : 119
+ Total Traceable Variables  : 395
+ Total Scalar Nets and Variables : 5580
+
+ Total Simulation Time: 2.64063 sec
+
+ Current Memory Usage: 796.172 Meg
+
+Fri Dec 16 00:01:05 2016
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "A:/ise/newPro/tb_isim_beh.exe" -prj "A:/ise/newPro/tb_beh.prj" "work.tb" 

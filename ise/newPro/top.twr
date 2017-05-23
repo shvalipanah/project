@@ -1,0 +1,763 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+B:\programfolder\ise\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v
+3 -s 3 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf first.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_i_CLK = PERIOD TIMEGRP "i_CLK" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_i_CLK = PERIOD TIMEGRP "i_CLK" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN2
+  Clock network: CLKGEN/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN2
+  Clock network: CLKGEN/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 18.148ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.852ns (539.957MHz) (Tpllper_CLKIN(Finmax))
+  Physical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: CLKGEN/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN2
+  Clock network: CLKGEN/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLKGEN_clkout0 = PERIOD TIMEGRP "CLKGEN_clkout0" TS_i_CLK 
+* 0.1 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3719 paths analyzed, 40 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.999ns.
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/counter_4 (SLICE_X7Y33.BX), 533 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     195.001ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_4_1 (FF)
+  Destination:          led_dr/counter_4 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.795ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_4_1 to led_dr/counter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.CQ       Tcko                  0.391   led_dr/counter_4_1
+                                                       led_dr/counter_4_1
+    SLICE_X6Y30.B1       net (fanout=13)       0.873   led_dr/counter_4_1
+    SLICE_X6Y30.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/counter_4_1_rt_pack_1
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CMUX     Tcinc                 0.272   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A3       net (fanout=2)        0.890   led_dr/counter[31]_GND_62_o_add_2_OUT<30>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.C        Tilo                  0.259   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+    SLICE_X7Y33.BX       net (fanout=1)        0.387   led_dr/counter_4_rstpot
+    SLICE_X7Y33.CLK      Tdick                 0.063   led_dr/counter_4_1
+                                                       led_dr/counter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.795ns (1.999ns logic, 2.796ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.026ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_2 (FF)
+  Destination:          led_dr/counter_4 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.754ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.016ns (0.278 - 0.294)
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_2 to led_dr/counter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.DQ       Tcko                  0.391   led_dr/counter<2>
+                                                       led_dr/counter_2
+    SLICE_X6Y29.C2       net (fanout=2)        0.833   led_dr/counter<2>
+    SLICE_X6Y29.COUT     Topcyc                0.295   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+                                                       led_dr/counter<2>_rt
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CMUX     Tcinc                 0.272   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A3       net (fanout=2)        0.890   led_dr/counter[31]_GND_62_o_add_2_OUT<30>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.C        Tilo                  0.259   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+    SLICE_X7Y33.BX       net (fanout=1)        0.387   led_dr/counter_4_rstpot
+    SLICE_X7Y33.CLK      Tdick                 0.063   led_dr/counter_4_1
+                                                       led_dr/counter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.754ns (1.995ns logic, 2.759ns route)
+                                                       (42.0% logic, 58.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.031ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_4_1 (FF)
+  Destination:          led_dr/counter_4 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.765ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_4_1 to led_dr/counter_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.CQ       Tcko                  0.391   led_dr/counter_4_1
+                                                       led_dr/counter_4_1
+    SLICE_X6Y30.B1       net (fanout=13)       0.873   led_dr/counter_4_1
+    SLICE_X6Y30.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/counter_4_1_rt_pack_1
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.BMUX     Tcinb                 0.260   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A4       net (fanout=2)        0.872   led_dr/counter[31]_GND_62_o_add_2_OUT<29>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.C        Tilo                  0.259   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+    SLICE_X7Y33.BX       net (fanout=1)        0.387   led_dr/counter_4_rstpot
+    SLICE_X7Y33.CLK      Tdick                 0.063   led_dr/counter_4_1
+                                                       led_dr/counter_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.765ns (1.987ns logic, 2.778ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/counter_2 (SLICE_X5Y32.D1), 135 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     195.311ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_4_1 (FF)
+  Destination:          led_dr/counter_2 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.473ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.012ns (0.280 - 0.292)
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_4_1 to led_dr/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.CQ       Tcko                  0.391   led_dr/counter_4_1
+                                                       led_dr/counter_4_1
+    SLICE_X6Y30.B1       net (fanout=13)       0.873   led_dr/counter_4_1
+    SLICE_X6Y30.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/counter_4_1_rt_pack_1
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.AMUX     Tcina                 0.177   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X7Y32.B1       net (fanout=1)        0.903   led_dr/counter[31]_GND_62_o_add_2_OUT<28>
+    SLICE_X7Y32.B        Tilo                  0.259   led_dr/latch
+                                                       led_dr/GND_62_o_counter[31]_equal_4_o<31>3
+    SLICE_X5Y32.D1       net (fanout=6)        0.670   led_dr/GND_62_o_counter[31]_equal_4_o<31>2
+    SLICE_X5Y32.CLK      Tas                   0.322   led_dr/counter<2>
+                                                       led_dr/counter_2_rstpot
+                                                       led_dr/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.473ns (1.904ns logic, 2.569ns route)
+                                                       (42.6% logic, 57.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.364ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_2 (FF)
+  Destination:          led_dr/counter_2 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.432ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_2 to led_dr/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.DQ       Tcko                  0.391   led_dr/counter<2>
+                                                       led_dr/counter_2
+    SLICE_X6Y29.C2       net (fanout=2)        0.833   led_dr/counter<2>
+    SLICE_X6Y29.COUT     Topcyc                0.295   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+                                                       led_dr/counter<2>_rt
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.AMUX     Tcina                 0.177   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X7Y32.B1       net (fanout=1)        0.903   led_dr/counter[31]_GND_62_o_add_2_OUT<28>
+    SLICE_X7Y32.B        Tilo                  0.259   led_dr/latch
+                                                       led_dr/GND_62_o_counter[31]_equal_4_o<31>3
+    SLICE_X5Y32.D1       net (fanout=6)        0.670   led_dr/GND_62_o_counter[31]_equal_4_o<31>2
+    SLICE_X5Y32.CLK      Tas                   0.322   led_dr/counter<2>
+                                                       led_dr/counter_2_rstpot
+                                                       led_dr/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.432ns (1.900ns logic, 2.532ns route)
+                                                       (42.9% logic, 57.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.408ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_1 (FF)
+  Destination:          led_dr/counter_2 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.388ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_1 to led_dr/counter_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.CQ       Tcko                  0.391   led_dr/counter<2>
+                                                       led_dr/counter_1
+    SLICE_X6Y29.B4       net (fanout=3)        0.709   led_dr/counter<1>
+    SLICE_X6Y29.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+                                                       led_dr/counter<1>_rt
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.AMUX     Tcina                 0.177   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X7Y32.B1       net (fanout=1)        0.903   led_dr/counter[31]_GND_62_o_add_2_OUT<28>
+    SLICE_X7Y32.B        Tilo                  0.259   led_dr/latch
+                                                       led_dr/GND_62_o_counter[31]_equal_4_o<31>3
+    SLICE_X5Y32.D1       net (fanout=6)        0.670   led_dr/GND_62_o_counter[31]_equal_4_o<31>2
+    SLICE_X5Y32.CLK      Tas                   0.322   led_dr/counter<2>
+                                                       led_dr/counter_2_rstpot
+                                                       led_dr/counter_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.388ns (1.980ns logic, 2.408ns route)
+                                                       (45.1% logic, 54.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/counter_4_1 (SLICE_X7Y33.C3), 114 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     195.388ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_4_1 (FF)
+  Destination:          led_dr/counter_4_1 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.408ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_4_1 to led_dr/counter_4_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.CQ       Tcko                  0.391   led_dr/counter_4_1
+                                                       led_dr/counter_4_1
+    SLICE_X6Y30.B1       net (fanout=13)       0.873   led_dr/counter_4_1
+    SLICE_X6Y30.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/counter_4_1_rt_pack_1
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CMUX     Tcinc                 0.272   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A3       net (fanout=2)        0.890   led_dr/counter[31]_GND_62_o_add_2_OUT<30>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.CLK      Tas                   0.322   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+                                                       led_dr/counter_4_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.408ns (1.999ns logic, 2.409ns route)
+                                                       (45.3% logic, 54.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.413ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_2 (FF)
+  Destination:          led_dr/counter_4_1 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.367ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.016ns (0.278 - 0.294)
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_2 to led_dr/counter_4_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.DQ       Tcko                  0.391   led_dr/counter<2>
+                                                       led_dr/counter_2
+    SLICE_X6Y29.C2       net (fanout=2)        0.833   led_dr/counter<2>
+    SLICE_X6Y29.COUT     Topcyc                0.295   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+                                                       led_dr/counter<2>_rt
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<3>
+    SLICE_X6Y30.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CMUX     Tcinc                 0.272   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A3       net (fanout=2)        0.890   led_dr/counter[31]_GND_62_o_add_2_OUT<30>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.CLK      Tas                   0.322   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+                                                       led_dr/counter_4_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.367ns (1.995ns logic, 2.372ns route)
+                                                       (45.7% logic, 54.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     195.418ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               led_dr/counter_4_1 (FF)
+  Destination:          led_dr/counter_4_1 (FF)
+  Requirement:          200.000ns
+  Data Path Delay:      4.378ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_5 rising at 0.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.204ns
+
+  Clock Uncertainty:          0.204ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.401ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: led_dr/counter_4_1 to led_dr/counter_4_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.CQ       Tcko                  0.391   led_dr/counter_4_1
+                                                       led_dr/counter_4_1
+    SLICE_X6Y30.B1       net (fanout=13)       0.873   led_dr/counter_4_1
+    SLICE_X6Y30.COUT     Topcyb                0.375   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+                                                       led_dr/counter_4_1_rt_pack_1
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<7>
+    SLICE_X6Y31.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.CIN      net (fanout=1)        0.108   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<11>
+    SLICE_X6Y32.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<15>
+    SLICE_X6Y33.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<19>
+    SLICE_X6Y34.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<23>
+    SLICE_X6Y35.COUT     Tbyp                  0.076   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.003   led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_cy<27>
+    SLICE_X6Y36.BMUX     Tcinb                 0.260   led_dr/counter[31]_GND_62_o_add_2_OUT<31>
+                                                       led_dr/Madd_counter[31]_GND_62_o_add_2_OUT_xor<31>
+    SLICE_X5Y32.A4       net (fanout=2)        0.872   led_dr/counter[31]_GND_62_o_add_2_OUT<29>
+    SLICE_X5Y32.A        Tilo                  0.259   led_dr/counter<2>
+                                                       led_dr/counter_0_rstpot_SW0
+    SLICE_X7Y33.C3       net (fanout=5)        0.523   N16
+    SLICE_X7Y33.CLK      Tas                   0.322   led_dr/counter_4_1
+                                                       led_dr/counter_4_rstpot
+                                                       led_dr/counter_4_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.378ns (1.987ns logic, 2.391ns route)
+                                                       (45.4% logic, 54.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLKGEN_clkout0 = PERIOD TIMEGRP "CLKGEN_clkout0" TS_i_CLK * 0.1 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/out_data (SLICE_X4Y33.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.579ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               led_dr/counter_1 (FF)
+  Destination:          led_dr/out_data (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.580ns (Levels of Logic = 1)
+  Clock Path Skew:      0.001ns (0.043 - 0.042)
+  Source Clock:         clk_5 rising at 200.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: led_dr/counter_1 to led_dr/out_data
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.CQ       Tcko                  0.198   led_dr/counter<2>
+                                                       led_dr/counter_1
+    SLICE_X4Y33.D5       net (fanout=3)        0.185   led_dr/counter<1>
+    SLICE_X4Y33.CLK      Tah         (-Th)    -0.197   led_dr/out_data
+                                                       led_dr/Mram_counter[3]_INPUTREV[15]_Mux_1_o11
+                                                       led_dr/out_data
+    -------------------------------------------------  ---------------------------
+    Total                                      0.580ns (0.395ns logic, 0.185ns route)
+                                                       (68.1% logic, 31.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/out_data (SLICE_X4Y33.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.619ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               led_dr/counter_3 (FF)
+  Destination:          led_dr/out_data (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.624ns (Levels of Logic = 1)
+  Clock Path Skew:      0.005ns (0.113 - 0.108)
+  Source Clock:         clk_5 rising at 200.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: led_dr/counter_3 to led_dr/out_data
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y33.AQ       Tcko                  0.198   led_dr/counter_4_1
+                                                       led_dr/counter_3
+    SLICE_X4Y33.D4       net (fanout=3)        0.229   led_dr/counter<3>
+    SLICE_X4Y33.CLK      Tah         (-Th)    -0.197   led_dr/out_data
+                                                       led_dr/Mram_counter[3]_INPUTREV[15]_Mux_1_o11
+                                                       led_dr/out_data
+    -------------------------------------------------  ---------------------------
+    Total                                      0.624ns (0.395ns logic, 0.229ns route)
+                                                       (63.3% logic, 36.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point led_dr/out_data (SLICE_X4Y33.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.779ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               led_dr/counter_0 (FF)
+  Destination:          led_dr/out_data (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.780ns (Levels of Logic = 1)
+  Clock Path Skew:      0.001ns (0.043 - 0.042)
+  Source Clock:         clk_5 rising at 200.000ns
+  Destination Clock:    clk_5 rising at 200.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: led_dr/counter_0 to led_dr/out_data
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y32.BQ       Tcko                  0.198   led_dr/counter<2>
+                                                       led_dr/counter_0
+    SLICE_X4Y33.D1       net (fanout=3)        0.385   led_dr/counter<0>
+    SLICE_X4Y33.CLK      Tah         (-Th)    -0.197   led_dr/out_data
+                                                       led_dr/Mram_counter[3]_INPUTREV[15]_Mux_1_o11
+                                                       led_dr/out_data
+    -------------------------------------------------  ---------------------------
+    Total                                      0.780ns (0.395ns logic, 0.385ns route)
+                                                       (50.6% logic, 49.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLKGEN_clkout0 = PERIOD TIMEGRP "CLKGEN_clkout0" TS_i_CLK * 0.1 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 198.270ns (period - min period limit)
+  Period: 200.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: CLKGEN/clkout1_buf/I0
+  Logical resource: CLKGEN/clkout1_buf/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: CLKGEN/clkout0
+--------------------------------------------------------------------------------
+Slack: 199.595ns (period - min period limit)
+  Period: 200.000ns
+  Min period limit: 0.405ns (2469.136MHz) (Tcp)
+  Physical resource: led_dr/out_data/CLK
+  Logical resource: led_dr/out_data/CK
+  Location pin: SLICE_X4Y33.CLK
+  Clock network: clk_5
+--------------------------------------------------------------------------------
+Slack: 199.606ns (period - min period limit)
+  Period: 200.000ns
+  Min period limit: 0.394ns (2538.071MHz) (Tcp)
+  Physical resource: led_dr/counter<2>/CLK
+  Logical resource: led_dr/counter_0/CK
+  Location pin: SLICE_X5Y32.CLK
+  Clock network: clk_5
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_i_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_i_CLK                       |     20.000ns|      5.000ns|      0.500ns|            0|            0|            0|         3719|
+| TS_CLKGEN_clkout0             |    200.000ns|      4.999ns|          N/A|            0|            0|         3719|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock i_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clk          |    4.999|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3719 paths, 0 nets, and 137 connections
+
+Design statistics:
+   Minimum period:   5.000ns{1}   (Maximum frequency: 200.000MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat Feb 25 15:49:23 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 166 MB
+
+
+

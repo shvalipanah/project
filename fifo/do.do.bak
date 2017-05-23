@@ -1,0 +1,29 @@
+# Compile of FIFO.vhd was successful.
+# Compile of tb.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -gui -novopt work.testbench
+# vsim -gui -novopt work.testbench 
+# Loading std.standard
+# Refreshing A:/fifo/work.testbench(fi)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(fi)
+# Refreshing A:/fifo/work.fifo(fo)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.fifo(fo)
+add wave -position insertpoint sim:/testbench/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+
+

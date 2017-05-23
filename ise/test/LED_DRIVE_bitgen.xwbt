@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=A:\ise\test\LED_DRIVE.ncd
+OUTFILE=A:\ise\test\LED_DRIVE.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=A:\ise\test
+LICENSE=WebPack
+USER_INFO=__0_0_0

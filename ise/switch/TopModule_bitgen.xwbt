@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=A:\ise\switch\TopModule.ncd
+OUTFILE=A:\ise\switch\TopModule.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=A:\ise\switch
+LICENSE=WebPack
+USER_INFO=__0_0_0

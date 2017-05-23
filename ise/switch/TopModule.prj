@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/clock.v"
+verilog work "switch_driver.v"
+verilog work "LED_DRIVER.v"
+verilog work "../TopModule.v"

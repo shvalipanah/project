@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_signed.all;
+
+
+ENTITY main IS
+PORT ( In_out_Data: INOUT std_logic_vector(7 DOWNTO 0);
+       Out_Address: OUT std_logic_vector(7 DOWNTO 0);
+       RST, CLK: IN std_logic;
+       EN,RW: OUT std_logic);
+END main;
+
+architecture myMain of main is
+  type myarray array of std_logic_vector(7 downto 0);
+begin
+end myMain;

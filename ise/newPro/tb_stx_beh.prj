@@ -1,0 +1,4 @@
+vhdl isim_temp "ipcore_dir/clock.vhd"
+vhdl isim_temp "LED_DRIVE.vhd"
+vhdl isim_temp "firstmodule.vhd"
+vhdl isim_temp "tb.vhd"

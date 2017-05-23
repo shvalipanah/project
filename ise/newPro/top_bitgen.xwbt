@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=A:\ise\newPro\top.ncd
+OUTFILE=A:\ise\newPro\top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=A:\ise\newPro
+LICENSE=WebPack
+USER_INFO=__0_0_0

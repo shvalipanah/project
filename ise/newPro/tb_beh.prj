@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/clock.vhd"
+vhdl work "LED_DRIVE.vhd"
+vhdl work "firstmodule.vhd"
+vhdl work "tb.vhd"

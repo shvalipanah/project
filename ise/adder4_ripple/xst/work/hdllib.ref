@@ -1,0 +1,4 @@
+AR ripple_adder4 behavioral A:/ise/adder4_ripple/ripple_adder4.vhd sub00/vhpl03 1481826919
+AR full_adder behavioral A:/ise/adder4_ripple/full_adder.vhd sub00/vhpl01 1481826917
+EN full_adder NULL A:/ise/adder4_ripple/full_adder.vhd sub00/vhpl00 1481826916
+EN ripple_adder4 NULL A:/ise/adder4_ripple/ripple_adder4.vhd sub00/vhpl02 1481826918

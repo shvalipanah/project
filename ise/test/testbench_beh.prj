@@ -1,0 +1,2 @@
+vhdl work "../newPro/LED_DRIVE.vhd"
+vhdl work "testbench.vhd"

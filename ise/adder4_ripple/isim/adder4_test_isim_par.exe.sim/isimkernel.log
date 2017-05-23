@@ -1,0 +1,30 @@
+Command line:
+   adder4_test_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/ripple_adder4_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  58059
+
+Thu Dec 15 22:23:13 2016
+
+
+ Elaboration Time: 2.46875 sec
+
+ Current Memory Usage: 797.45 Meg
+
+ Total Signals          : 313
+ Total Nets             : 182
+ Total Signal Drivers   : 153
+ Total Blocks           : 105
+ Total Primitive Blocks : 56
+ Total Processes        : 151
+ Total Traceable Variables  : 469
+ Total Scalar Nets and Variables : 5878
+
+ Total Simulation Time: 2.73438 sec
+
+ Current Memory Usage: 797.45 Meg
+
+Thu Dec 15 22:54:12 2016
+

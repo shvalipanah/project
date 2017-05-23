@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "A:/ise/adder4_ripple/adder4_test_isim_par.exe" -prj "A:/ise/adder4_ripple/adder4_test_par.prj" "work.adder4_test" 

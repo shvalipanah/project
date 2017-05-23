@@ -1,0 +1,3 @@
+work	"LED_DRIVE.vhd"
+work	"firstmodule.vhd"
+work	"ipcore_dir/clock.vhd"

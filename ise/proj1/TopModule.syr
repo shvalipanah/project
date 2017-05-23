@@ -1,0 +1,978 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: TopModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopModule.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopModule"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : TopModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\proj1\switch_driver.v" into library work
+Parsing module <switch_driver>.
+Analyzing Verilog file "E:\proj1\sevenOut.v" into library work
+Parsing module <sevenOut>.
+Analyzing Verilog file "E:\proj1\RegisterFile.v" into library work
+Parsing module <RegisterFile>.
+Analyzing Verilog file "E:\proj1\push_button.v" into library work
+Parsing module <push_button>.
+Analyzing Verilog file "E:\proj1\LED_DRIVER.v" into library work
+Parsing module <LED_DRIVER>.
+Analyzing Verilog file "E:\proj1\Execute.v" into library work
+Parsing module <Execute>.
+Analyzing Verilog file "E:\proj1\Decoder.v" into library work
+Parsing module <Decoder>.
+Analyzing Verilog file "E:\proj1\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "E:\proj1\BCD2SEVEN.v" into library work
+Parsing module <BCD2SEVEN>.
+Analyzing Verilog file "E:\proj1\TopModule.v" into library work
+Parsing module <TopModule>.
+Parsing VHDL file "E:\proj1\ipcore_dir\clock.vhd" into library work
+Parsing entity <clock>.
+Parsing architecture <xilinx> of entity <clock>.
+Parsing VHDL file "E:\proj1\ipcore_dir\instruction_memory.vhd" into library work
+Parsing entity <instruction_memory>.
+Parsing architecture <instruction_memory_a> of entity <instruction_memory>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TopModule>.
+Going to vhdl side to elaborate module clock
+
+Elaborating entity <clock> (architecture <xilinx>) from library <work>.
+Back to verilog to continue elaboration
+
+Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "E:\proj1\debounce.v" Line 43: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\debounce.v" Line 65: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\debounce.v" Line 72: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:91 - "E:\proj1\TopModule.v" Line 161: Signal <jump> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <Decoder>.
+
+Elaborating module <RegisterFile>.
+WARNING:HDLCompiler:413 - "E:\proj1\RegisterFile.v" Line 45: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "E:\proj1\RegisterFile.v" Line 49: Signal <registers> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\RegisterFile.v" Line 50: Signal <registers> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\TopModule.v" Line 189: Signal <shiftf> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\TopModule.v" Line 190: Signal <op2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\TopModule.v" Line 192: Signal <op2data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <Execute>.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 73: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 86: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 103: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 116: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 130: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 161: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 163: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 175: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 177: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 189: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 191: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 203: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 205: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 217: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 219: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 231: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 233: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 248: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 258: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 263: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\Execute.v" Line 291: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 301: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 313: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 325: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 337: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 349: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 371: Signal <immdata> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 380: Signal <DatainMemory> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 398: Signal <dipsdata> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 407: Signal <DatainMemory> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 416: Signal <DatainMemory> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\proj1\Execute.v" Line 418: Signal <DatainMemory> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:189 - "E:\proj1\TopModule.v" Line 196: Size mismatch in connection of port <aluop>. Formal port size is 6-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:1127 - "E:\proj1\TopModule.v" Line 206: Assignment to DatainMemory ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\proj1\TopModule.v" Line 207: Assignment to en_writedm ignored, since the identifier is never used
+
+Elaborating module <switch_driver>.
+
+Elaborating module <LED_DRIVER>.
+
+Elaborating module <push_button>.
+WARNING:HDLCompiler:413 - "E:\proj1\push_button.v" Line 47: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\proj1\push_button.v" Line 54: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "E:\proj1\TopModule.v" Line 240: Assignment to outplus ignored, since the identifier is never used
+
+Elaborating module <BCD2SEVEN>.
+WARNING:HDLCompiler:413 - "E:\proj1\BCD2SEVEN.v" Line 295: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <sevenOut>.
+WARNING:HDLCompiler:413 - "E:\proj1\sevenOut.v" Line 26: Result of 5-bit expression is truncated to fit in 4-bit target.
+Going to vhdl side to elaborate module instruction_memory
+
+Elaborating entity <instruction_memory> (architecture <instruction_memory_a>) from library <work>.
+Back to verilog to continue elaboration
+WARNING:HDLCompiler:634 - "E:\proj1\TopModule.v" Line 129: Net <memorydata[7]> does not have a driver.
+WARNING:Xst:2972 - "E:\proj1\TopModule.v" line 237. All outputs of instance <pushbutton> of block <push_button> are unconnected in block <TopModule>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopModule>.
+    Related source file is "E:\proj1\TopModule.v".
+WARNING:Xst:647 - Input <i_Eth_INT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_MMC_DO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SYS_RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 141: Output port <CLK_OUT20> of the instance <CLKGEN> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 141: Output port <CLK_OUT50> of the instance <CLKGEN> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 141: Output port <CLK_OUT100> of the instance <CLKGEN> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 195: Output port <DatainMemory> of the instance <exec> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 195: Output port <en_writedm> of the instance <exec> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\proj1\TopModule.v" line 237: Output port <out> of the instance <pushbutton> is unconnected or connected to loadless signal.
+Always blocking tristate driving signal <io_USB_IFCLK> is removed.
+Always blocking tristate driving signal <io_Data<7>> is removed.
+Always blocking tristate driving signal <io_Data<6>> is removed.
+Always blocking tristate driving signal <io_Data<5>> is removed.
+Always blocking tristate driving signal <io_Data<4>> is removed.
+Always blocking tristate driving signal <io_Data<3>> is removed.
+Always blocking tristate driving signal <io_Data<2>> is removed.
+Always blocking tristate driving signal <io_Data<1>> is removed.
+Always blocking tristate driving signal <io_Data<0>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<9>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<8>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<7>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<6>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<5>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<4>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<3>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<2>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<1>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<0>> is removed.
+WARNING:Xst:653 - Signal <memorydata> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit subtractor for signal <immdata[7]_GND_1_o_sub_5_OUT> created at line 162.
+    Found 1-bit tristate buffer for signal <o_MMC_SCK> created at line 71
+    Found 1-bit tristate buffer for signal <o_MMC_DI> created at line 73
+    Found 1-bit tristate buffer for signal <o_MMC_CS> created at line 74
+    Found 1-bit tristate buffer for signal <o_VGA_blue0> created at line 76
+    Found 1-bit tristate buffer for signal <o_VGA_blue1> created at line 77
+    Found 1-bit tristate buffer for signal <o_VGA_green0> created at line 78
+    Found 1-bit tristate buffer for signal <o_VGA_green1> created at line 79
+    Found 1-bit tristate buffer for signal <o_VGA_red0> created at line 80
+    Found 1-bit tristate buffer for signal <o_VGA_red1> created at line 81
+    Found 1-bit tristate buffer for signal <o_VGA_vsync> created at line 82
+    Found 1-bit tristate buffer for signal <o_VGA_hsync> created at line 83
+    Found 1-bit tristate buffer for signal <o_Eth_RST> created at line 85
+    Found 1-bit tristate buffer for signal <o_Eth_CS> created at line 87
+    Found 1-bit tristate buffer for signal <o_Eth_RD> created at line 88
+    Found 1-bit tristate buffer for signal <o_Eth_WR> created at line 89
+    Found 1-bit tristate buffer for signal <o_USB_SLOE> created at line 90
+    Found 1-bit tristate buffer for signal <o_USB_SLRD> created at line 92
+    Found 1-bit tristate buffer for signal <o_USB_SLWR> created at line 93
+    Found 1-bit tristate buffer for signal <o_TXD1> created at line 97
+    Found 1-bit tristate buffer for signal <o_TXD2> created at line 98
+    Found 1-bit tristate buffer for signal <o_LCDData> created at line 105
+    Found 1-bit tristate buffer for signal <o_LCDLatch> created at line 106
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+	inferred  22 Tristate(s).
+Unit <TopModule> synthesized.
+
+Synthesizing Unit <clock>.
+    Related source file is "E:\proj1\ipcore_dir\clock.vhd".
+    Summary:
+	no macro.
+Unit <clock> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "E:\proj1\debounce.v".
+    Found 19-bit register for signal <timer>.
+    Found 8-bit register for signal <out>.
+    Found 1-bit register for signal <flagdebug>.
+    Found 19-bit register for signal <timerdebug>.
+    Found 1-bit register for signal <flagreset>.
+    Found 19-bit adder for signal <timer[18]_GND_53_o_add_3_OUT> created at line 43.
+    Found 19-bit adder for signal <timerdebug[18]_GND_53_o_add_10_OUT> created at line 65.
+    Found 8-bit adder for signal <pc[7]_GND_53_o_add_18_OUT> created at line 72.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <Decoder>.
+    Related source file is "E:\proj1\Decoder.v".
+    Summary:
+	inferred   7 Multiplexer(s).
+Unit <Decoder> synthesized.
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "E:\proj1\RegisterFile.v".
+WARNING:Xst:647 - Input <data<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8x1-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <RegisterFile> synthesized.
+
+Synthesizing Unit <Execute>.
+    Related source file is "E:\proj1\Execute.v".
+WARNING:Xst:647 - Input <memorydata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9-bit subtractor for signal <GND_56_o_GND_56_o_sub_7_OUT> created at line 98.
+    Found 9-bit subtractor for signal <GND_56_o_GND_56_o_sub_50_OUT> created at line 258.
+    Found 9-bit adder for signal <n0246> created at line 68.
+    Found 9-bit adder for signal <n0248> created at line 243.
+    Found 16-bit shifter arithmetic right for signal <n0191> created at line 158
+    Found 16-bit shifter logical right for signal <n0194> created at line 172
+    Found 16-bit shifter logical left for signal <n0197> created at line 186
+    Found 1-bit 27-to-1 multiplexer for signal <_n1048> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1174> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1300> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1426> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1552> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1678> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1804> created at line 54.
+    Found 1-bit 27-to-1 multiplexer for signal <_n1930> created at line 54.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <en_write>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <datainseg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <jump>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DatainMemory<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <en_writedm>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <flags<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <flags<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <flags<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <flags<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_output<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit comparator equal for signal <op1[7]_op1[7]_equal_18_o> created at line 161
+    Found 1-bit comparator equal for signal <op1[7]_op1[7]_equal_23_o> created at line 175
+    Found 1-bit comparator equal for signal <op1[7]_op1[7]_equal_28_o> created at line 189
+    Found 1-bit comparator equal for signal <op1[7]_op1[7]_equal_38_o> created at line 217
+    Found 1-bit comparator equal for signal <op1[7]_op1[7]_equal_43_o> created at line 231
+    Found 1-bit comparator equal for signal <n0064> created at line 337
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  32 Latch(s).
+	inferred   6 Comparator(s).
+	inferred 110 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Execute> synthesized.
+
+Synthesizing Unit <switch_driver>.
+    Related source file is "E:\proj1\switch_driver.v".
+    Found 1-bit register for signal <latch>.
+    Found 5-bit register for signal <counter>.
+    Found 21-bit register for signal <data>.
+    Found 21-bit register for signal <out>.
+    Found 5-bit adder for signal <counter[4]_GND_91_o_add_2_OUT> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+Unit <switch_driver> synthesized.
+
+Synthesizing Unit <LED_DRIVER>.
+    Related source file is "E:\proj1\LED_DRIVER.v".
+    Found 1-bit register for signal <latch>.
+    Found 16-bit register for signal <data>.
+    Found 1-bit register for signal <out_data>.
+    Found 5-bit register for signal <counter>.
+    Found 5-bit adder for signal <counter[4]_GND_92_o_add_2_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <LED_DRIVER> synthesized.
+
+Synthesizing Unit <BCD2SEVEN>.
+    Related source file is "E:\proj1\BCD2SEVEN.v".
+    Found 7-bit register for signal <Seg>.
+    Found 8-bit register for signal <Count>.
+    Found 5-bit register for signal <temp>.
+    Found 8-bit adder for signal <_n0373> created at line 295.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <BCD2SEVEN> synthesized.
+
+Synthesizing Unit <sevenOut>.
+    Related source file is "E:\proj1\sevenOut.v".
+    Found 4-bit register for signal <count>.
+    Found 1-bit register for signal <sevenLatch>.
+    Found 16-bit register for signal <reg_data>.
+    Found 1-bit register for signal <sevenData>.
+    Found 4-bit adder for signal <count[3]_GND_95_o_add_3_OUT> created at line 26.
+    Found 1-bit 16-to-1 multiplexer for signal <count[3]_reg_data[15]_Mux_2_o> created at line 25.
+    Found 4-bit comparator greater for signal <count[3]_PWR_51_o_LessThan_2_o> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <sevenOut> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x1-bit dual-port RAM                                 : 1
+# Adders/Subtractors                                   : 12
+ 19-bit adder                                          : 2
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Registers                                            : 20
+ 1-bit register                                        : 7
+ 16-bit register                                       : 2
+ 19-bit register                                       : 2
+ 21-bit register                                       : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 3
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Latches                                              : 32
+ 1-bit latch                                           : 32
+# Comparators                                          : 7
+ 1-bit comparator equal                                : 6
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 137
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 105
+ 1-bit 27-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Tristates                                            : 22
+ 1-bit tristate buffer                                 : 22
+# Xors                                                 : 1
+ 9-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/instruction_memory.ngc>.
+Loading core <instruction_memory> for timing and area information for instance <im>.
+WARNING:Xst:1710 - FF/Latch <reg_data_0> (without init value) has a constant value of 0 in block <so>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_data_1> (without init value) has a constant value of 0 in block <so>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_data_7> (without init value) has a constant value of 0 in block <so>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_data_8> (without init value) has a constant value of 0 in block <so>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_14> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_15> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_16> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_17> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_18> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_19> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <data_20> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_0> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_1> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_4> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_6> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_7> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_8> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_9> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_10> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_11> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_12> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_13> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_14> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_15> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_16> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_17> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_18> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_19> of sequential type is unconnected in block <s_driver>.
+WARNING:Xst:2677 - Node <out_20> of sequential type is unconnected in block <s_driver>.
+
+Synthesizing (advanced) Unit <BCD2SEVEN>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+Unit <BCD2SEVEN> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LED_DRIVER>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <LED_DRIVER> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RegisterFile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <en_write>      | high     |
+    |     addrA          | connected to signal <op1>           |          |
+    |     diA            | connected to signal <data>          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     addrB          | connected to signal <op2>           |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RegisterFile> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+The following registers are absorbed into counter <timerdebug>: 1 register on signal <timerdebug>.
+Unit <debounce> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sevenOut>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <sevenOut> synthesized (advanced).
+
+Synthesizing (advanced) Unit <switch_driver>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <switch_driver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x1-bit dual-port distributed RAM                     : 1
+# Adders/Subtractors                                   : 7
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 6
+ 19-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 101
+ Flip-Flops                                            : 101
+# Comparators                                          : 7
+ 1-bit comparator equal                                : 6
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 137
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 105
+ 1-bit 27-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 9-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <temp_2> (without init value) has a constant value of 0 in block <BCD2SEVEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_7> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_6> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_5> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_4> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_1> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_3> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <DatainMemory_2> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_7> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_6> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_5> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_4> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_3> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_2> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <datainseg_1> has a constant value of 0 in block <Execute>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance CLKGEN/pll_base_inst in unit CLKGEN/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <TopModule> ...
+
+Optimizing unit <switch_driver> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <LED_DRIVER> ...
+
+Optimizing unit <BCD2SEVEN> ...
+
+Optimizing unit <sevenOut> ...
+
+Optimizing unit <Execute> ...
+
+Optimizing unit <Decoder> ...
+WARNING:Xst:1710 - FF/Latch <so/reg_data_8> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <so/reg_data_7> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <so/reg_data_4> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <so/reg_data_1> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <so/reg_data_0> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <s_driver/out_20> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_19> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_18> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_17> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_16> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_15> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_14> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_13> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_12> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_11> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_10> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_9> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_8> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_7> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_6> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_4> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_1> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/out_0> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_20> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_19> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_18> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_17> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_16> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_15> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <s_driver/data_14> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_1> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_2> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_4> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_3> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_5> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_6> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/data_output_7> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <exec/en_writedm> of sequential type is unconnected in block <TopModule>.
+INFO:Xst:2261 - The FF/Latch <s_driver/counter_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <so/count_0> 
+INFO:Xst:2261 - The FF/Latch <Seven_Seg/Count_7> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <Seven_Seg/Count_6> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <exec/flags_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <exec/flags_1> 
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 5.
+WARNING:Xst:2677 - Node <exec/flags_0> of sequential type is unconnected in block <TopModule>.
+
+Final Macro Processing ...
+
+Processing Unit <TopModule> :
+	Found 10-bit shift register for signal <s_driver/data_13>.
+	Found 3-bit shift register for signal <s_driver/data_2>.
+Unit <TopModule> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 115
+ Flip-Flops                                            : 115
+# Shift Registers                                      : 2
+ 10-bit shift register                                 : 1
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopModule.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 354
+#      GND                         : 2
+#      INV                         : 6
+#      LUT1                        : 43
+#      LUT2                        : 19
+#      LUT3                        : 36
+#      LUT4                        : 24
+#      LUT5                        : 43
+#      LUT6                        : 84
+#      MUXCY                       : 43
+#      MUXF7                       : 6
+#      MUXF8                       : 1
+#      VCC                         : 2
+#      XORCY                       : 45
+# FlipFlops/Latches                : 124
+#      FD                          : 21
+#      FDE                         : 27
+#      FDR                         : 19
+#      FDRE                        : 49
+#      LD                          : 8
+# RAMS                             : 2
+#      RAM16X1D                    : 1
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 30
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 6
+#      OBUFT                       : 22
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             124  out of  11440     1%  
+ Number of Slice LUTs:                  259  out of   5720     4%  
+    Number used as Logic:               255  out of   5720     4%  
+    Number used as Memory:                4  out of   1440     0%  
+       Number used as RAM:                2
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    272
+   Number with an unused Flip Flop:     148  out of    272    54%  
+   Number with an unused LUT:            13  out of    272     4%  
+   Number of fully used LUT-FF pairs:   111  out of    272    40%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          58
+ Number of bonded IOBs:                  30  out of    102    29%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+CLKGEN/pll_base_inst/CLKOUT0       | BUFG                     | 120   |
+exec/_n0983(exec/_n09831:O)        | NONE(*)(exec/flags_2)    | 2     |
+exec/_n0540(exec/_n05401:O)        | NONE(*)(exec/datainseg_0)| 6     |
+-----------------------------------+--------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.437ns (Maximum Frequency: 155.346MHz)
+   Minimum input arrival time before clock: 1.801ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLKGEN/pll_base_inst/CLKOUT0'
+  Clock period: 6.437ns (frequency: 155.346MHz)
+  Total number of paths / destination ports: 2743 / 283
+-------------------------------------------------------------------------
+Delay:               6.437ns (Levels of Logic = 5)
+  Source:            im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination:       dem/out_7 (FF)
+  Source Clock:      CLKGEN/pll_base_inst/CLKOUT0 rising
+  Destination Clock: CLKGEN/pll_base_inst/CLKOUT0 rising
+
+  Data Path: im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to dem/out_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11   46   1.850   1.491  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (douta<15>)
+     end scope: 'im:douta<15>'
+     LUT6:I5->O            5   0.205   0.715  inPCData<3>11 (inPCData<3>_bdd0)
+     LUT6:I5->O            1   0.205   0.580  inPCData<4>1_G (N102)
+     LUT3:I2->O            3   0.205   0.879  inPCData<4>11 (inPCData<4>)
+     LUT6:I3->O            1   0.205   0.000  dem/pc[7]_GND_53_o_add_18_OUT<7>1 (dem/pc[7]_GND_53_o_add_18_OUT<7>)
+     FDRE:D                    0.102          dem/out_7
+    ----------------------------------------
+    Total                      6.437ns (2.772ns logic, 3.665ns route)
+                                       (43.1% logic, 56.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'exec/_n0540'
+  Clock period: 3.746ns (frequency: 266.966MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               3.746ns (Levels of Logic = 4)
+  Source:            exec/DatainMemory_0 (LATCH)
+  Destination:       exec/data_output_0 (LATCH)
+  Source Clock:      exec/_n0540 falling
+  Destination Clock: exec/_n0540 falling
+
+  Data Path: exec/DatainMemory_0 to exec/data_output_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.498   0.651  exec/DatainMemory_0 (exec/DatainMemory_0)
+     LUT5:I4->O            1   0.205   0.580  exec/Mmux__n03492351 (exec/Mmux__n0349235)
+     LUT6:I5->O            1   0.205   0.580  exec/Mmux__n03492352 (exec/Mmux__n03492351)
+     LUT6:I5->O            1   0.205   0.580  exec/Mmux__n03492353 (exec/Mmux__n03492352)
+     LUT6:I5->O            1   0.205   0.000  exec/Mmux__n03492358 (exec/_n1930)
+     LD:D                      0.037          exec/data_output_0
+    ----------------------------------------
+    Total                      3.746ns (1.355ns logic, 2.391ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKGEN/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            i_DIPData (PAD)
+  Destination:       s_driver/Mshreg_data_2 (FF)
+  Destination Clock: CLKGEN/pll_base_inst/CLKOUT0 rising
+
+  Data Path: i_DIPData to s_driver/Mshreg_data_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  i_DIPData_IBUF (i_DIPData_IBUF)
+     SRLC16E:D                -0.060          s_driver/Mshreg_data_2
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKGEN/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            l_drive/out_data (FF)
+  Destination:       o_LEDData (PAD)
+  Source Clock:      CLKGEN/pll_base_inst/CLKOUT0 rising
+
+  Data Path: l_drive/out_data to o_LEDData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  l_drive/out_data (l_drive/out_data)
+     OBUF:I->O                 2.571          o_LEDData_OBUF (o_LEDData)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLKGEN/pll_base_inst/CLKOUT0
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+CLKGEN/pll_base_inst/CLKOUT0|    6.437|         |         |         |
+exec/_n0540                 |         |    4.752|         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock exec/_n0540
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+CLKGEN/pll_base_inst/CLKOUT0|         |         |   10.203|         |
+exec/_n0540                 |         |         |    3.746|         |
+exec/_n0983                 |         |         |    2.692|         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock exec/_n0983
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+CLKGEN/pll_base_inst/CLKOUT0|         |         |   12.313|         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 34.59 secs
+ 
+--> 
+
+Total memory usage is 283600 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  179 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

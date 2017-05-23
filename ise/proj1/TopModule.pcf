@@ -1,0 +1,103 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat May 13 08:03:45 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "i_Eth_INT" LOCATE = SITE "P21" LEVEL 1;
+COMP "o_LEDLatch" LOCATE = SITE "P15" LEVEL 1;
+COMP "o_SEGData" LOCATE = SITE "P7" LEVEL 1;
+COMP "o_SEGLatch" LOCATE = SITE "P8" LEVEL 1;
+COMP "o_PSCLK" LOCATE = SITE "P133" LEVEL 1;
+COMP "i_CLK" LOCATE = SITE "P14" LEVEL 1;
+COMP "i_MMC_DO" LOCATE = SITE "P143" LEVEL 1;
+COMP "io_Data<0>" LOCATE = SITE "P56" LEVEL 1;
+COMP "io_Data<1>" LOCATE = SITE "P57" LEVEL 1;
+COMP "io_Data<2>" LOCATE = SITE "P58" LEVEL 1;
+COMP "io_Data<3>" LOCATE = SITE "P59" LEVEL 1;
+COMP "io_Data<4>" LOCATE = SITE "P55" LEVEL 1;
+COMP "io_Data<5>" LOCATE = SITE "P51" LEVEL 1;
+COMP "io_Data<6>" LOCATE = SITE "P50" LEVEL 1;
+COMP "io_Data<7>" LOCATE = SITE "P48" LEVEL 1;
+COMP "i_RXD1" LOCATE = SITE "P9" LEVEL 1;
+COMP "i_RXD2" LOCATE = SITE "P11" LEVEL 1;
+COMP "i_DIPData" LOCATE = SITE "P134" LEVEL 1;
+COMP "io_USB_IFCLK" LOCATE = SITE "P29" LEVEL 1;
+COMP "i_SYS_RESET" LOCATE = SITE "P47" LEVEL 1;
+COMP "io_MuxEthUSB<0>" LOCATE = SITE "P43" LEVEL 1;
+COMP "io_MuxEthUSB<1>" LOCATE = SITE "P41" LEVEL 1;
+COMP "io_MuxEthUSB<2>" LOCATE = SITE "P44" LEVEL 1;
+COMP "io_MuxEthUSB<3>" LOCATE = SITE "P30" LEVEL 1;
+COMP "io_MuxEthUSB<4>" LOCATE = SITE "P45" LEVEL 1;
+COMP "io_MuxEthUSB<5>" LOCATE = SITE "P32" LEVEL 1;
+COMP "io_MuxEthUSB<6>" LOCATE = SITE "P33" LEVEL 1;
+COMP "io_MuxEthUSB<7>" LOCATE = SITE "P34" LEVEL 1;
+COMP "io_MuxEthUSB<8>" LOCATE = SITE "P35" LEVEL 1;
+COMP "io_MuxEthUSB<9>" LOCATE = SITE "P40" LEVEL 1;
+COMP "o_DIPLatch" LOCATE = SITE "P2" LEVEL 1;
+COMP "o_LEDData" LOCATE = SITE "P16" LEVEL 1;
+PIN CLKGEN/clkout1_buf_pin<1> = BEL "CLKGEN/clkout1_buf" PINNAME O;
+PIN "CLKGEN/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN
+        im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP CLKGEN_clkout0 = BEL "CLKGEN/clkout1_buf" BEL "s_driver/counter_4" BEL
+        "s_driver/counter_3" BEL "s_driver/counter_2" BEL "s_driver/counter_1"
+        BEL "s_driver/counter_0" BEL "s_driver/out_5" BEL "s_driver/out_3" BEL
+        "s_driver/out_2" BEL "s_driver/latch" BEL "s_driver/data_3" BEL
+        "dem/timerdebug_18" BEL "dem/timerdebug_17" BEL "dem/timerdebug_16"
+        BEL "dem/timerdebug_15" BEL "dem/timerdebug_14" BEL
+        "dem/timerdebug_13" BEL "dem/timerdebug_12" BEL "dem/timerdebug_11"
+        BEL "dem/timerdebug_10" BEL "dem/timerdebug_9" BEL "dem/timerdebug_8"
+        BEL "dem/timerdebug_7" BEL "dem/timerdebug_6" BEL "dem/timerdebug_5"
+        BEL "dem/timerdebug_4" BEL "dem/timerdebug_3" BEL "dem/timerdebug_2"
+        BEL "dem/timerdebug_1" BEL "dem/timerdebug_0" BEL "dem/timer_18" BEL
+        "dem/timer_17" BEL "dem/timer_16" BEL "dem/timer_15" BEL
+        "dem/timer_14" BEL "dem/timer_13" BEL "dem/timer_12" BEL
+        "dem/timer_11" BEL "dem/timer_10" BEL "dem/timer_9" BEL "dem/timer_8"
+        BEL "dem/timer_7" BEL "dem/timer_6" BEL "dem/timer_5" BEL
+        "dem/timer_4" BEL "dem/timer_3" BEL "dem/timer_2" BEL "dem/timer_1"
+        BEL "dem/timer_0" BEL "dem/out_7" BEL "dem/out_6" BEL "dem/out_5" BEL
+        "dem/out_4" BEL "dem/out_3" BEL "dem/out_2" BEL "dem/out_1" BEL
+        "dem/out_0" BEL "l_drive/counter_4" BEL "l_drive/counter_3" BEL
+        "l_drive/counter_2" BEL "l_drive/counter_1" BEL "l_drive/counter_0"
+        BEL "l_drive/data_15" BEL "l_drive/data_14" BEL "l_drive/data_13" BEL
+        "l_drive/data_12" BEL "l_drive/data_11" BEL "l_drive/data_10" BEL
+        "l_drive/data_9" BEL "l_drive/data_8" BEL "l_drive/data_7" BEL
+        "l_drive/data_6" BEL "l_drive/data_5" BEL "l_drive/data_4" BEL
+        "l_drive/data_3" BEL "l_drive/data_2" BEL "l_drive/data_1" BEL
+        "l_drive/data_0" BEL "l_drive/latch" BEL "Seven_Seg/Count_7" BEL
+        "Seven_Seg/Count_5" BEL "Seven_Seg/Count_4" BEL "Seven_Seg/Count_3"
+        BEL "Seven_Seg/Count_2" BEL "Seven_Seg/Count_1" BEL
+        "Seven_Seg/Count_0" BEL "Seven_Seg/Seg_6" BEL "Seven_Seg/Seg_5" BEL
+        "Seven_Seg/Seg_4" BEL "Seven_Seg/Seg_3" BEL "Seven_Seg/Seg_2" BEL
+        "Seven_Seg/Seg_1" BEL "Seven_Seg/Seg_0" BEL "Seven_Seg/temp_4" BEL
+        "Seven_Seg/temp_3" BEL "Seven_Seg/temp_1" BEL "Seven_Seg/temp_0" BEL
+        "so/count_3" BEL "so/count_2" BEL "so/count_1" BEL "so/reg_data_15"
+        BEL "so/reg_data_14" BEL "so/reg_data_13" BEL "so/reg_data_12" BEL
+        "so/reg_data_11" BEL "so/reg_data_10" BEL "so/reg_data_9" BEL
+        "so/reg_data_6" BEL "so/reg_data_5" BEL "so/reg_data_3" BEL
+        "so/reg_data_2" BEL "dem/flagdebug" BEL "dem/flagreset" BEL
+        "l_drive/out_data" BEL "so/sevenData" BEL "so/sevenLatch" BEL
+        "s_driver/Mshreg_data_13" BEL "s_driver/Mshreg_data_2" BEL
+        "s_driver/data_2" PIN
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>"
+        BEL "o_PSCLK" BEL "RF/Mram_registers/DP" BEL "RF/Mram_registers/SP";
+PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0> = BEL
+        "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0" PINNAME DIVCLK;
+PIN CLKGEN/pll_base_inst/PLL_ADV_pins<2> = BEL "CLKGEN/pll_base_inst/PLL_ADV"
+        PINNAME CLKIN1;
+TIMEGRP i_CLK = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>" PIN
+        "CLKGEN/pll_base_inst/PLL_ADV_pins<2>";
+TS_i_CLK = PERIOD TIMEGRP "i_CLK" 50 MHz HIGH 50%;
+TS_CLKGEN_clkout0 = PERIOD TIMEGRP "CLKGEN_clkout0" TS_i_CLK * 0.1 HIGH 50%;
+SCHEMATIC END;
+

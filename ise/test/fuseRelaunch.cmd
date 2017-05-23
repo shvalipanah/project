@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "A:/ise/test/testbench_isim_beh.exe" -prj "A:/ise/test/testbench_beh.prj" "work.testbench" 
